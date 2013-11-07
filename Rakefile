@@ -4,4 +4,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-D3Api::Application.load_tasks
+BattlenetMate::Application.load_tasks
