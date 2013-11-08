@@ -1,3 +1,6 @@
 BattlenetMate::Application.routes.draw do
-  root :to => 'home#index'
+  match '/home/wow'=> 'home#wow'
+  match '/home/diablo'=> 'home#diablo'
+
+  root :to => 'home#wow'
 end

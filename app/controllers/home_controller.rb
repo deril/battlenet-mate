@@ -1,4 +1,9 @@
 class HomeController < ApplicationController
-  def index
+  def wow
+    api = Battlenet.new :eu
+    @character = api.character('Chamber of Aspects', 'Idmon').to_hash
+  end
+
+  def diablo
   end
 end
