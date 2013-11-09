@@ -1,19 +1,23 @@
 %h1
-  = @character['name']
-  %small= @character['realm']
+  = @full_name
+  %small
+    = @character['realm']
 
 %table.table
+  %caption
   %thead
     %tr
-      %td Property Name
-      %td Value
+      %td
+        %strong Property Name
+      %td
+        %strong Value
   %tbody
     %tr
-      %td Class
-      %td Monk
+      %td Race
+      %td= @race_name
     %tr
       %td Class
-      %td Monk
+      %td= @class_name
     %tr
-      %td Class
-      %td Monk
+      %td Level
+      %td= @character['level']
