@@ -6,6 +6,13 @@ gem 'sqlite3'
 gem 'haml-rails'
 gem 'foundation-rails'
 
+gem 'httparty'
+
+group :development do
+  gem 'quiet_assets'
+  gem 'meta_request'
+end
+
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
