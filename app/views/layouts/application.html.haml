@@ -12,5 +12,7 @@
     = csrf_meta_tags
 
   %body
-    = yield
+    .row
+      = yield
+
     = javascript_include_tag "application"
