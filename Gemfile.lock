@@ -51,8 +51,13 @@ GEM
     foundation-rails (5.0.2.0)
       railties (>= 3.1.0)
       sass (>= 3.2.0)
-    haml (4.0.3)
+    haml (4.0.4)
       tilt
+    haml-rails (0.4)
+      actionpack (>= 3.1, < 4.1)
+      activesupport (>= 3.1, < 4.1)
+      haml (>= 3.1, < 4.1)
+      railties (>= 3.1, < 4.1)
     hike (1.2.3)
     i18n (0.6.1)
     journey (1.0.4)
@@ -128,7 +133,7 @@ DEPENDENCIES
   coffee-rails (~> 3.2.1)
   debugger
   foundation-rails
-  haml
+  haml-rails
   jquery-rails
   rails (= 3.2.13)
   sass-rails (~> 3.2.3)
