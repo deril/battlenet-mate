@@ -1,7 +1,11 @@
 !!!
 %html{lang: "en"}
   %head
-    %title= content_for?(:title) ? yield(:title) : "foundation-rails"
+    %title
+      d3 mate
+      - if content_for?(:title)
+        \-
+        = yield(:title)
 
     %meta{charset: "utf-8"}
     %meta{content: "width=device-width, initial-scale=1.0", name: "viewport"}
