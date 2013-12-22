@@ -19,6 +19,7 @@
     = render 'shared/navbar'
 
     .row
-      = yield
+      .columns
+        = yield
 
     = javascript_include_tag "application"
