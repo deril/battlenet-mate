@@ -1,16 +1,20 @@
 - content_for :title, 'Heroes'
 
-%h1
-  Heroes
-  %small= @career['battleTag']
+.row
+  .column
 
-.heroes
-  - @career['heroes'].each do |hero|
-    %a.hero-portrait-wrapper{href: "home/show/#{hero['id']}/", class: ('hardcore' if hero['hardcore'])}
-      %span.hero-portrait{class: hero_class(hero)}
-      %span.name= hero['name']
-      %span.skill-measure
-        = @profile.hero(hero['id'])['kills']['elites']
-        Elite kills
-      %span.level{class: ('d3-color-hardcore' if hero['hardcore'])}
-        = hero['level']
+    %h1
+      Heroes
+      %small= @career['battleTag']
+
+    %p
+      .heroes
+        - @career['heroes'].each do |hero|
+          %a.hero-portrait-wrapper{href: "home/show/#{hero['id']}/", class: ('hardcore' if hero['hardcore'])}
+            %span.hero-portrait{class: hero_class(hero)}
+            %span.name= hero['name']
+            %span.skill-measure
+              = number_with_delimiter(@profile.hero(hero['id'])['kills']['elites'])
+              Elite kills
+            %span.level{class: ('d3-color-hardcore' if hero['hardcore'])}
+              = hero['level']

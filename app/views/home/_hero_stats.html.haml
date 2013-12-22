@@ -1,0 +1,42 @@
+%table
+
+  %thead
+    %tr
+      %th{colspan: 2} Attributes
+      %th{colspan: 2} Damage
+
+  %tbody
+
+    %tr
+      %td Life
+      %td= number_with_delimiter(stats['life'])
+      %td DPS
+      %td= number_with_precision(stats['damage'], precision: 2, delimiter: ',', strip_insignificant_zeros: true)
+
+    %tr
+      %td Strength
+      %td= stats['strength']
+      %td Attack Speed
+      %td= stats['attackSpeed'].round(2)
+
+    %tr
+      %td Dexterity
+      %td= stats['dexterity']
+      %td Crit Chance
+      %td= stats['critChance'].round(2)
+
+    %tr
+      %td Intelligence
+      %td= stats['intelligence']
+      %td Crit Damage
+      %td= stats['critDamage'].round(2)
+
+    %tr
+      %td Vitality
+      %td= stats['vitality']
+      %td Magic Find
+      %td= stats['magicFind'].round(2)
+
+    %tr
+      %td Gold Find
+      %td= stats['goldFind'].round(2)

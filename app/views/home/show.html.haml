@@ -1,14 +1,39 @@
 - content_for :title, "#{@career['battleTag']}: #{@hero['name']}"
 
-.header
-  %h1
-    %span.hero-name= @hero['name']
-    %small= @career['battleTag']
+.row
+  .column
+    .header
 
-  %strong= @hero['level']
-  - unless @hero['paragonLevel'].zero?
-    %span.paragon-level= "(#{@hero['paragonLevel']})"
-  = @hero['class'].titleize
-  - if @hero['hardcore']
-    \-
-    %span.d3-color-hardcore Hardcore
+      %h1
+        %span.hero-name= @hero['name']
+        %small= @career['battleTag']
+
+      %p
+        %strong= @hero['level']
+        - unless @hero['paragonLevel'].zero?
+          %span.paragon-level= "(#{@hero['paragonLevel']})"
+        = @hero['class'].titleize
+        - if @hero['hardcore']
+          \-
+          %span.d3-color-hardcore Hardcore
+
+.row
+
+  .column.large-7
+    %p= @hero['stats']
+
+  .column.large-5
+
+    %dl.accordion(data-accordion)
+      %dd
+        %a{href: '#panel1'} Hero Information
+        #panel1.content.active
+          = render partial: 'hero_info', locals: { hero: @hero }
+
+    %dl.accordion(data-accordion)
+      %dd
+        %a{href: '#panel2'} DPS & EPS Gains by Stats
+        #panel2.content
+          %p
+            %strong TODO:
+            Make it like on d3up.com

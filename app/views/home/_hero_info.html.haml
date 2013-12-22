@@ -1,0 +1,17 @@
+%dl.tabs(data-tab)
+
+  %dd.active
+    %a{href:"#panel1-1"} Statistics
+
+  %dd
+    %a{href:"#panel1-2"} Skills
+
+.tabs-content
+
+  #panel1-1.content.active
+    = render partial: 'hero_stats', locals: { stats: hero['stats'] }
+
+  #panel1-2.content
+    %p
+      %strong TODO:
+      Copy from battle.net (like hero icons on home page).
