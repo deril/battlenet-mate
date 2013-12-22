@@ -1,0 +1,16 @@
+- content_for :title, 'Heroes'
+
+%h1
+  Diablo III
+  %small= @career['battleTag']
+
+.heroes
+  - hero = @hero
+  %a.hero-portrait-wrapper{class: ('hardcore' if hero['hardcore'])}
+    %span.hero-portrait{class: hero_class(hero)}
+    %span.name= hero['name']
+    %span.skill-measure
+      = @profile.hero(hero['id'])['kills']['elites']
+      Elite kills
+    %span.level{class: ('d3-color-hardcore' if hero['hardcore'])}
+      = hero['level']
