@@ -1,12 +1,12 @@
 - content_for :title, 'Heroes'
 
 %h1
-  Diablo III
+  Heroes
   %small= @career['battleTag']
 
 .heroes
   - @career['heroes'].each do |hero|
-    %a.hero-portrait-wrapper{class: ('hardcore' if hero['hardcore'])}
+    %a.hero-portrait-wrapper{href: "home/show/#{hero['id']}/", class: ('hardcore' if hero['hardcore'])}
       %span.hero-portrait{class: hero_class(hero)}
       %span.name= hero['name']
       %span.skill-measure
