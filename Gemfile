@@ -11,10 +11,12 @@ group :production do
 end
 
 group :development do
-  gem 'sqlite3'
-
   gem 'quiet_assets'
   gem 'meta_request'
+end
+
+group :development, :test do
+  gem 'sqlite3'
 end
 
 group :assets do
