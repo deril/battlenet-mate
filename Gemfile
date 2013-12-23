@@ -2,13 +2,17 @@ source 'https://rubygems.org'
 
 gem 'rails', '3.2.13'
 
-gem 'sqlite3'
 gem 'haml-rails'
 gem 'foundation-rails'
-
 gem 'httparty'
 
+group :production do
+  gem 'pg'
+end
+
 group :development do
+  gem 'sqlite3'
+
   gem 'quiet_assets'
   gem 'meta_request'
 end
