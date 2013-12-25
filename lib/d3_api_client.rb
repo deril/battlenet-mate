@@ -2,7 +2,7 @@ class D3ApiClient
   def initialize(battletag_name, battletag_code, region)
     @battletag_name = battletag_name
     @battletag_code = battletag_code
-    @host = 'http://%s.battle.net/' % region
+    @host = "http://#{region}.battle.net/"
   end
 
   def career
