@@ -5,3 +5,5 @@ application.css: application-7142fb2237bb1f5ca52bbc7d110220e1.css
 application/index.css: application-7142fb2237bb1f5ca52bbc7d110220e1.css
 jquery.min.map: jquery.min-6336c5bca4c709e809647cdfcb484d0a.map
 jquery/index.min.map: jquery.min-6336c5bca4c709e809647cdfcb484d0a.map
+vendor/modernizr.js: vendor/modernizr-bfec1265b2cb28f467d48810d350d9b4.js
+vendor/modernizr/index.js: vendor/modernizr-bfec1265b2cb28f467d48810d350d9b4.js
